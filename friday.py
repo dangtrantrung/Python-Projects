@@ -24,7 +24,7 @@ def welcome():
         speak("Good afternoon sir")
     elif hour >=18 and hour <24:
         speak("Good night sir")
-    speak("How can i help you?")
+    speak("I'm Friday AI Assistant. How can i help you?")
 
 if __name__=="__main__":
     welcome()
