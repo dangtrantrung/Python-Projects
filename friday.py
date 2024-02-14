@@ -1,10 +1,10 @@
-import pyttsx3
 import datetime
+import os
+import webbrowser as wb
+
+import pyttsx3
 # speech to text
 import speech_recognition as sr
-import webbrowser as wb
-import os
-
 
 friday=pyttsx3.init()
 voice=friday.getProperty('voices')
@@ -45,27 +45,27 @@ def command():
     return query
 
 
-if __name__=="__main__":
-    welcome()
-    while True:
-        query=command().lower()
-        if 'google' in query:
-            speak('What should I search boss?')
-            search=command().lower()
-            url=f'https://google.com/search?q={search}'
-            wb.get().open(url)
-            speak(f'Here is your {search} on Google')
-        elif 'youtube' in query:
-            speak('What should I search boss?')
-            search=command().lower()
-            url=f'https://youtube.com/search?q={search}'
-            wb.get().open(url)
-            speak(f'Here is your {search} on youtube')
-        elif 'open video' in query:
-            meme=r'C:\Users\Public\Videos\Sample Videos\Wildlife.wmv'
-            os.startfile(meme)
-        elif 'time' in query:
-            time()
-        elif 'quit' in query:
-            speak("Friday AI assistant is quitting sir. Goodbye boss!!!")
-            quit()
+# if __name__=="__main__":
+#     welcome()
+#     while True:
+#         query=command().lower()
+#         if 'google' in query:
+#             speak('What should I search boss?')
+#             search=command().lower()
+#             url=f'https://google.com/search?q={search}'
+#             wb.get().open(url)
+#             speak(f'Here is your {search} on Google')
+#         elif 'youtube' in query:
+#             speak('What should I search boss?')
+#             search=command().lower()
+#             url=f'https://youtube.com/search?q={search}'
+#             wb.get().open(url)
+#             speak(f'Here is your {search} on youtube')
+#         elif 'open video' in query:
+#             meme=r'C:\Users\Public\Videos\Sample Videos\Wildlife.wmv'
+#             os.startfile(meme)
+#         elif 'time' in query:
+#             time()
+#         elif 'quit' in query:
+#             speak("Friday AI assistant is quitting sir. Goodbye boss!!!")
+#             quit()
